@@ -2,12 +2,12 @@ package Day04;
 
 public class SimpleObserver implements Observer {
     private int value;
-    private Subject simpleSubject;
+    private Subject simpleSubject; // mối quan hệ giữa người đăng ký và nhà xuất bản
 
     public SimpleObserver(Subject simpleSubject) {
         this.simpleSubject = simpleSubject;
-        simpleSubject.registerObserver(this);
-    }
+        this.simpleSubject.registerObserver(this);
+    }// mối quan hệ assosiation
 
     @Override
     public void update(int value) {
